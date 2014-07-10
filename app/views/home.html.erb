@@ -1,0 +1,28 @@
+
+<div class="mailer" style="display:none;">
+This site is currently under construction. <br/>
+Sign up for our e-mail list to know when we've launched!
+<br/><br/>
+
+<div class="row">
+  <div class="small-12 large-12 columns mailer-form">
+      <form action="/mailer" method="post">
+        <p><input type="text" name="first_name" placeholder="First Name"></p>
+        <p><input type="text" name="last_name" placeholder="Last Name"></p>
+        <p><input type="text" name="email" placeholder="Email"></p>
+        <p><input type="submit" value="Keep me posted!" class="button radius"></p>
+      </form>
+    </div>
+</div>
+
+
+</div>
+
+
+<script>
+$(document).ready(function(){ 
+  $('.header').fadeIn(2000);
+  $('.mailer').delay( 800 ).fadeIn(2000);
+
+});
+</script>

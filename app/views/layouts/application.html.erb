@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lanimot</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+<div class="header" style="display:none;">
+<%= image_tag 'lanimot_logo.png', width: "600px" %>
+<br/>
+A vegan outreach project by Linda Monahan
+</div>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
