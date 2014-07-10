@@ -12,6 +12,8 @@
  *= require_tree .
  /*= require foundation
  */
+//= depend_on_asset "wavegrid.png"
+
 
 html body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
