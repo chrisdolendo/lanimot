@@ -10,10 +10,17 @@
 <header>
 <div class="header" style="display:none;">
 <%= image_tag 'lanimot_logo.png', width: "600px" %>
-<br/>
 A vegan outreach project by Linda Monahan
 </div>
 </header>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 
 <%= yield %>
 

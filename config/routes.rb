@@ -1,6 +1,7 @@
 Lanimot::Application.routes.draw do
   
-  root to: 'application#index'
+  devise_for :users
+  root to: 'sessions#new'
   post '/mailer', to: 'application#mailer_post'
 
 end

@@ -13,6 +13,7 @@
  /*= require foundation
  */
 //= depend_on_asset "wavegrid.png"
+//= depend_on_asset "grass.jpg"
 
 html body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -29,16 +30,33 @@ h2 {
 
 .header {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 
+.homepage {
+  background-image: url('<%=asset_path("grass.jpg")%>');
+  background-size: cover;
+  background-repeat:no-repeat;
+  font-weight: 500;
+}
+
+
 .mailer {
-  text-align: center;
-  padding: 30px;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 html .mailer-form {
   text-align: center;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .homepage {
+    background-size: auto;
+    background-color: black;
+  }
 }

@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
     Listserv.create(params)
     GeneralMailer.user_signed_up(params[:first_name], params[:email]).deliver
     GeneralMailer.notify_admin(params).deliver
-    p "sent"
     render template: 'contact_saved'
   end
 
