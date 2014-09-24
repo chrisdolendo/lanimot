@@ -1,0 +1,58 @@
+
+<body class="homepage" style="display:none">
+
+  <div class="row">
+
+    <div class="small-12 large-8 columns">
+      <h3>Why L'animot?</h3>
+      <p>French Algerian philosopher Jacques Derrida introduced the term “l’animot” as an alternative to the [group singular] “animeaux” and “animal,” as these words offer one limiting referent for what is, in actuality, a capacious category of species that includes humans. L’animot rejects the human/animal binary that separates out one species from the rest our shared animal kingdom.
+      <br/><br/>
+      In recognizing that humans are animals, and that we are all l’animot, a moral imperative emerges: veganism. Once we remove the arbitrary barriers to empathy that have been constructed between species, we can recognize others as unique individuals with the right to bodily integrity and autonomy.
+      <br/><br/>
+      L’animot is a community of people seeking nourishment through a vegan lifestyle. We honor the power of creative arts to express the deeply held convictions that guide our lives. We welcome artistic submissions, creative essays, and others works made by vegans about compassionate, just living. This is a space for connection, support, and inspiration.
+      <br/><br/>
+      L’animot. It feels good to be free.</p>
+    </div>
+
+
+    <div class="small-12 large-4 columns">
+
+
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+  <!--   <div><%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %> <br>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %> <br>
+    </div>
+ -->
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+    <div><%= f.submit "Sign up" %></div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+
+ </div>
+
+  <br><br><br>
+
+</body>
+
+<script>
+$(document).ready(function(){ 
+  $('.header').fadeIn(2000);
+  $('.homepage').delay( 800 ).fadeIn(2000);
+});
+</script>

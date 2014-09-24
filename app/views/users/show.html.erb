@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="left_profile">
+    <h1>Hello, <%= current_user.first_name if current_user.first_name != nil %>! </h1>
+    <p><%= gravatar_tag current_user.email, :size => 100 %></p>
+    <p>Name: <%= current_user.first_name %> <%= current_user.last_name %> </p>
+    <p>Email: <%= current_user.email %></p>
+    <p>Birthdate: <%= current_user.birthday %></p>
+    <p>Lives in: <%= current_user.lives_in %></p>
+    <p>Blurb: <%= current_user.blurb %></p>
+    <%= link_to "Edit Profile", edit_user_registration_path %>
+  </div>
+
+  
+
+</div>

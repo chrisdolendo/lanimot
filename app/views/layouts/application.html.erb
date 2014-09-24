@@ -7,22 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-<div class="header" style="display:none;">
-<%= image_tag 'lanimot_logo.png', width: "600px" %>
-A vegan outreach project by Linda Monahan
-</div>
-</header>
 
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <% if current_page?(root_path) && user_signed_in? == false%>
+    <div class="header">
+    <a href="/"> <%= image_tag 'lanimot_logo.png', width: "600px" %></a>
+    A vegan outreach project by Linda Monahan
+    </div>
+  <% else %>
+    <%= render partial: "shared/horizontal_header" %>
+  <% end %>
 
 
-<%= yield %>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+
+  <%= yield %>
+
+
+  <%= render partial: "shared/footer" %>
 
 </body>
 </html>

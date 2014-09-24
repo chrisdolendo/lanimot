@@ -9,6 +9,9 @@ gem 'pg'
 #user session management
 gem 'devise'
 
+#user fanciness
+gem 'gravatarify', '~> 3.0.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -41,6 +44,8 @@ gem 'protected_attributes'
 group :production do
   gem 'rails_12factor'
 end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
