@@ -8,15 +8,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-
-  def check_current_user
-    if current_user == nil
-      authenticate_user!
-    end
-  end
-
-
 
 
 end

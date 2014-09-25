@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_current_user
+  before_action :authenticate_user!
 
 
   def new
