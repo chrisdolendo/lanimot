@@ -45,6 +45,18 @@ group :production do
   gem 'rails_12factor'
 end
 
+#create tests using rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'capybara'
+end
+
 
 
 # Use ActiveModel has_secure_password
