@@ -1,0 +1,15 @@
+<div class="row">
+
+  <%= render partial: 'users/user_snapshot' %>
+
+  <div class="small-12 large-8 columns">
+    <h2>Vegan Stream</h2>
+
+    <% Post.all.each do |post| %>
+      <% user = User.find(post.user_id) %>
+      <p> <a href="/users/<%= user.id %>"> <%= gravatar_tag user.email, :size => 100 %> <%= user.first_name %></a><br/>
+      <%= post.content %></p>
+    <% end %>
+  </div>
+
+</div>

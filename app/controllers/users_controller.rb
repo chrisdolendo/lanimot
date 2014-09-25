@@ -7,12 +7,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    p params
-    p "we are at create"
   end
 
   def show
-    
+    @user = User.find(params[:id])
   end
 
 end
