@@ -1,4 +1,4 @@
-    <div class="small-12 large-4 columns">
+    <div class="small-12 large-3 columns">
         <h2>Hello, <%= current_user.first_name if current_user.first_name != nil %>! </h2>
         <p><%= gravatar_tag current_user.email, :size => 100 %></p>
         <p>Name: <%= current_user.first_name %> <%= current_user.last_name %> </p>

@@ -20,7 +20,7 @@
       </div>
 
       <div><%= f.label :lives_in %> <br>
-      <%= f.text_field :lives_in, autofocus: true %>
+      <%= f.text_field :lives_in, autofocus: true, id: "location" %>
       </div>
 
 
@@ -53,3 +53,7 @@
 
   <%= link_to "Back", :back %>
 </div>
+
+<script>
+  $("#location").geocomplete();
+</script>
