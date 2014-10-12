@@ -2,20 +2,20 @@
 
   <div id="map-canvas"></div>
 
-  <%= render partial: 'users/user_snapshot' %>
+  <%= render partial: 'users/currentuser_snapshot' %>
 
-  <div class="small-12 large-6 columns">
+  <div class="small-12 large-4 columns">
     <h2>Vegan Stream</h2>
 
     <% Post.all.each do |post| %>
       <% user = User.find(post.user_id) %>
-      <p> <a href="/users/<%= user.id %>"> <%= gravatar_tag user.email, :size => 100 %> <%= user.first_name %></a><br/>
+      <p> <a href="/users/<%= user.id %>"> <%= gravatar_tag user.email, :size => 100 %> <%= user.first_name %></a><br/> <span class="small-font"> <%= user.lives_in %> </span> <br/>
       <%= post.content %></p>
     <% end %>
   </div>
 
   <div class="small-12 large-3 columns">
-    <h2>Vegans online now:</h2>
+    <h3>Vegans online now:</h3>
 
     <% OnlineUser.all.each do |online_user| %>
       <% user = User.find(online_user.user_id) %>
