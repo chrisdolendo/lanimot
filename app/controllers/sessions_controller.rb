@@ -19,7 +19,7 @@ class SessionsController < Devise::SessionsController
     user_id = current_user.id
     p user_id
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
-    OnlineUser.find_by_user_id(user_id).destroy
+    OnlineUser.find_by_user_id(user_id).destroy if OnlineUser.find_by_user_id(user_id) != nil
     set_flash_message :notice, :signed_out if signed_out && is_flashing_format?
     yield if block_given?
     respond_to_on_destroy
