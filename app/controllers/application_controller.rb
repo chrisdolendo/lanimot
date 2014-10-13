@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def contact
+    render 'general/contact'
+  end
+
 
 
 end
